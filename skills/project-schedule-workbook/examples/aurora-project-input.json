@@ -1,0 +1,29 @@
+{
+  "project": {
+    "name": "Aurora Experience Center",
+    "manager": "Program Lead",
+    "startDate": "2026-09-01",
+    "targetDate": "2026-10-30",
+    "timelineDays": 70,
+    "viewStartDate": "2026-09-01"
+  },
+  "holidays": [
+    { "name": "Public Holiday", "date": "2026-10-01" },
+    { "name": "Public Holiday", "date": "2026-10-02" }
+  ],
+  "workdays": [],
+  "tasks": [
+    { "id": "P1", "parentId": "", "type": "Phase", "name": "Discovery and Definition", "description": "Confirm scope and operating requirements", "owner": "Program Lead", "startDate": "2026-09-01", "finishDate": "2026-09-11", "progress": 0.65, "status": "In Progress", "priority": "High", "dependency": "", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "T1", "parentId": "P1", "type": "Task", "name": "Stakeholder interviews", "description": "Interview key operating teams", "owner": "Research Lead", "startDate": "2026-09-01", "finishDate": "2026-09-04", "progress": 1, "status": "Accepted", "priority": "Medium", "dependency": "", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "T2", "parentId": "P1", "type": "Task", "name": "Scope baseline", "description": "Freeze scope and acceptance principles", "owner": "Program Lead", "startDate": "2026-09-05", "finishDate": "2026-09-11", "progress": 0.3, "status": "In Progress", "priority": "High", "dependency": "T1", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "M1", "parentId": "P1", "type": "Milestone", "name": "Scope approved", "description": "Sponsor approves the baseline", "owner": "Program Sponsor", "startDate": "2026-09-11", "finishDate": "2026-09-11", "progress": 0, "status": "Not Started", "priority": "P0", "dependency": "T2", "milestone": true, "confirmed": true, "notes": "" },
+    { "id": "P2", "parentId": "", "type": "Phase", "name": "Design and Build", "description": "Design, production, installation and integration", "owner": "Delivery Lead", "startDate": "2026-09-12", "finishDate": "2026-10-20", "progress": 0.1, "status": "In Progress", "priority": "High", "dependency": "M1", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "T3", "parentId": "P2", "type": "Task", "name": "Detailed design", "description": "Complete coordinated design package", "owner": "Design Lead", "startDate": "2026-09-12", "finishDate": "2026-09-22", "progress": 0.35, "status": "In Progress", "priority": "High", "dependency": "M1", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "T4", "parentId": "P2", "type": "Task", "name": "Production and procurement", "description": "Produce long-lead items", "owner": "Vendor Lead", "startDate": "2026-09-20", "finishDate": "2026-10-08", "progress": 0.05, "status": "In Progress", "priority": "High", "dependency": "T3", "milestone": false, "confirmed": false, "notes": "Finish date requires vendor confirmation" },
+    { "id": "T5", "parentId": "P2", "type": "Task", "name": "Installation and integration", "description": "Install and test on site", "owner": "Delivery Lead", "startDate": "2026-10-09", "finishDate": "2026-10-20", "progress": 0, "status": "Not Started", "priority": "P0", "dependency": "T4", "milestone": false, "confirmed": false, "notes": "Draft sequence" },
+    { "id": "P3", "parentId": "", "type": "Phase", "name": "Acceptance and Handover", "description": "Acceptance, training and transition", "owner": "QA Lead", "startDate": "2026-10-21", "finishDate": "2026-10-30", "progress": 0, "status": "Not Started", "priority": "P0", "dependency": "T5", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "T6", "parentId": "P3", "type": "Task", "name": "Integrated acceptance", "description": "Run acceptance criteria and close blockers", "owner": "QA Lead", "startDate": "2026-10-21", "finishDate": "2026-10-26", "progress": 0, "status": "Not Started", "priority": "P0", "dependency": "T5", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "T7", "parentId": "P3", "type": "Task", "name": "Operator training", "description": "Train and verify independent operation", "owner": "Operations Lead", "startDate": "2026-10-25", "finishDate": "2026-10-28", "progress": 0, "status": "Not Started", "priority": "High", "dependency": "T6", "milestone": false, "confirmed": true, "notes": "" },
+    { "id": "M2", "parentId": "P3", "type": "Milestone", "name": "Operational handover", "description": "Authorized handover decision", "owner": "Program Sponsor", "startDate": "2026-10-30", "finishDate": "2026-10-30", "progress": 0, "status": "Not Started", "priority": "P0", "dependency": "T6,T7", "milestone": true, "confirmed": true, "notes": "" }
+  ]
+}
